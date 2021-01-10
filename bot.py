@@ -26,4 +26,8 @@ async def on_member_remove(member):
     print(F'{member}走了!')
 
 
+@bot.event
+async def ping(ctx):
+    await ctx.send(F'{round(bot.latency*1000)}ms')
+
 bot.run(diict['Token'])
